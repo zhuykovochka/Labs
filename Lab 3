@@ -1,0 +1,14 @@
+text1, word1, word2 = input("Введите текст: "), input("Первое слово: "), input("Второе слово: ")
+text = text1 + " "
+lst = []
+st = ''
+for sym in text:
+    if sym.isalpha():
+        st += sym
+    else:
+        if len(st):
+            lst.append(st)
+        lst.append(sym)
+        st = ''
+end_text = "".join(word2 if word == word1 else word for word in lst)
+print(end_text)
